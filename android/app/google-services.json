@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1035192554384",
+    "firebase_url": "https://bookingflight-841d8-default-rtdb.firebaseio.com",
+    "project_id": "bookingflight-841d8",
+    "storage_bucket": "bookingflight-841d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035192554384:android:1ab19eb0db4dfcf0149915",
+        "android_client_info": {
+          "package_name": "com.example.booking_flights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035192554384-iu5f68sn8h8bbjohapchu7v4f4bg9m45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7e_2yc0e1eKkmVlKv2aNACqy8EJQVuxQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035192554384-iu5f68sn8h8bbjohapchu7v4f4bg9m45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
