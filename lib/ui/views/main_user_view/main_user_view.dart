@@ -46,9 +46,7 @@ class _MainUserViewState extends State<MainUserView> {
           ],
           selectedIndex: controller.selectedIndex.value,
           onTabChange: (index) {
-            print(index);
-            controller.selectedIndex.value = index;
-            controller.controller.jumpToPage(index);
+            controller.onChanged(index);
           },
         ),
       ),

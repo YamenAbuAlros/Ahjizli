@@ -187,7 +187,7 @@ class _CreateTripState extends State<CreateTrip> {
                                 CustomText(
                                     text: 'Return',
                                     textcolor: AppColors.mainBlack,
-                                    fontWeight: FontWeight.w500)
+                                    )
                               ],
                             )),
                         ElevatedButton(
@@ -212,7 +212,7 @@ class _CreateTripState extends State<CreateTrip> {
                                 CustomText(
                                     text: 'One Way',
                                     textcolor: AppColors.mainBlack,
-                                    fontWeight: FontWeight.w500)
+                                    )
                               ],
                             )),
                       ],

@@ -43,9 +43,7 @@ class _BookTripState extends State<BookTrip> {
                   )
                 ]),
           ),
-          SizedBox(
-            height: width * 0.04,
-          ),
+          (width * 0.04).sbheight,
           Center(
             child: Obx(
               () => controller.isLoading.value
@@ -135,9 +133,7 @@ class _BookTripState extends State<BookTrip> {
                                       ],
                                     ),
                                     Row(children: [
-                                      SizedBox(
-                                        width: width * 0.03,
-                                      ),
+                                      (width * 0.03).sbwidth,
                                       Column(
                                         children: [
                                           CustomText(
@@ -153,9 +149,7 @@ class _BookTripState extends State<BookTrip> {
                                                   "${controller.tripsList[index].to}"),
                                         ],
                                       ),
-                                      SizedBox(
-                                        width: width * 0.03,
-                                      )
+                                      (width * 0.03).sbwidth,
                                     ]),
                                     controller.tripsList[index].round != "true"
                                         ? CustomText(
@@ -218,9 +212,7 @@ class _BookTripState extends State<BookTrip> {
                                             children: [
                                               const Icon(Icons.arrow_upward),
 
-                                              SizedBox(
-                                                width: width * 0.02,
-                                              ),
+                                              (width * 0.02).sbwidth,
                                               CustomText(
                                                   text:
                                                       "${controller.tripsList[index].goToDate}"),
@@ -247,9 +239,7 @@ class _BookTripState extends State<BookTrip> {
                                                     Icons.arrow_downward),
                                                 // SvgPicture.asset(
                                                 //     'assets/images/time.svg'),
-                                                SizedBox(
-                                                  width: width * 0.02,
-                                                ),
+                                                (width * 0.02).sbwidth,
                                                 CustomText(
                                                     text:
                                                         "${controller.tripsList[index].backDate}"),

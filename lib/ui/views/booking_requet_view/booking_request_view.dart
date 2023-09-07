@@ -1,9 +1,7 @@
-// ignore_for_file: invalid_use_of_protected_member, unnecessary_string_interpolations
-
 import 'package:booking_flights/ui/shared/colors.dart';
 import 'package:booking_flights/ui/shared/custom_widgets/custom_button.dart';
 import 'package:booking_flights/ui/shared/custom_widgets/custom_text.dart';
-import 'package:booking_flights/ui/shared/datastructure/datastructure_controller.dart';
+import 'package:booking_flights/ui/shared/extensions/extensions.dart';
 import 'package:booking_flights/ui/shared/utilis.dart';
 import 'package:booking_flights/ui/views/booking_requet_view/booking_request_controller.dart';
 import 'package:flutter/material.dart';
@@ -69,8 +67,6 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                           padding: EdgeInsetsDirectional.only(
                                               start: width * 0.01),
                                           child: CustomText(
-                                              textcolor: AppColors.mainBlue1,
-                                              fontsize: width * 0.04,
                                               text:
                                                   '${controller.bookingRequests[index].firstname} ${controller.bookingRequests[index].lastname}'),
                                         ),
@@ -81,8 +77,6 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                               bottom: width * 0.09),
                                           child: CustomText(
                                               fontWeight: FontWeight.w600,
-                                              textcolor: AppColors.mainBlue1,
-                                              fontsize: width * 0.04,
                                               text: controller
                                                   .bookingRequests[index]
                                                   .tripId!
@@ -134,19 +128,13 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                       .spaceBetween,
                                               children: [
                                                 CustomText(
-                                                    fontsize: width * 0.04,
-                                                    fontWeight: FontWeight.w500,
                                                     text:
                                                         "${controller.bookingRequests[index].address!}: ${controller.bookingRequests[index].firstname} ${controller.bookingRequests[index].lastname}"),
                                                 CustomText(
-                                                    fontsize: width * 0.04,
-                                                    fontWeight: FontWeight.w500,
                                                     text: controller
                                                         .bookingRequests[index]
                                                         .nationality!),
                                                 CustomText(
-                                                    fontsize: width * 0.04,
-                                                    fontWeight: FontWeight.w500,
                                                     text: controller
                                                         .bookingRequests[index]
                                                         .gender!),
@@ -162,25 +150,16 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                         .spaceBetween,
                                                 children: [
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text: controller
                                                           .bookingRequests[
                                                               index]
                                                           .passportNumber!),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text: controller
                                                           .bookingRequests[
                                                               index]
                                                           .expiryDate!),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text: controller
                                                           .bookingRequests[
                                                               index]
@@ -194,15 +173,11 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                       .spaceBetween,
                                               children: [
                                                 CustomText(
-                                                    fontsize: width * 0.04,
-                                                    fontWeight: FontWeight.w500,
                                                     text:
                                                         "${controller.tripsList[controller.bookingRequests[index].tripId]?.from!}"),
                                                 SvgPicture.asset(
                                                     'assets/images/plane.svg'),
                                                 CustomText(
-                                                    fontsize: width * 0.04,
-                                                    fontWeight: FontWeight.w500,
                                                     text:
                                                         "${controller.tripsList[controller.bookingRequests[index].tripId]?.to!}"),
                                               ],
@@ -220,22 +195,13 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                       Icons.arrow_upward),
                                                   Center(
                                                     child: CustomText(
-                                                        fontsize: width * 0.04,
-                                                        fontWeight:
-                                                            FontWeight.w500,
                                                         text:
                                                             "${controller.tripsList[controller.bookingRequests[index].tripId]?.goToDate!}"),
                                                   ),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text:
                                                           "${controller.tripsList[controller.bookingRequests[index].tripId]?.goToLeave!}"),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text:
                                                           "${controller.tripsList[controller.bookingRequests[index].tripId]?.goToCome!}")
                                                 ],
@@ -258,22 +224,13 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                       Icons.arrow_downward),
                                                   Center(
                                                     child: CustomText(
-                                                        fontsize: width * 0.04,
-                                                        fontWeight:
-                                                            FontWeight.w500,
                                                         text:
                                                             "${controller.tripsList[controller.bookingRequests[index].tripId]?.backDate!}"),
                                                   ),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text:
                                                           "${controller.tripsList[controller.bookingRequests[index].tripId]?.backLeave!}"),
                                                   CustomText(
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
                                                       text:
                                                           "${controller.tripsList[controller.bookingRequests[index].tripId]?.backCome!}")
                                                 ],
@@ -290,9 +247,6 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                 children: [
                                                   Center(
                                                     child: CustomText(
-                                                        fontsize: width * 0.04,
-                                                        fontWeight:
-                                                            FontWeight.w500,
                                                         text: controller
                                                             .bookingRequests[
                                                                 index]
@@ -301,17 +255,14 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                   CustomText(
                                                       textcolor: AppColors
                                                           .mainRedAcecnt,
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      text:
-                                                          "${controller.bookingRequests[index].noticeId!}"),
+                                                      text: controller
+                                                          .bookingRequests[
+                                                              index]
+                                                          .noticeId!),
                                                   CustomText(
                                                       textcolor: AppColors
                                                           .mainRedAcecnt,
-                                                      fontsize: width * 0.04,
-                                                      fontWeight:
-                                                          FontWeight.w500,
+                                                      
                                                       text:
                                                           "${controller.bookingRequests[index].price!} \$"),
                                                 ],
@@ -325,9 +276,11 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                                                   AppColors.mainRedAcecnt,
                                               onPressed: () {
                                                 controller
-                                                    .showBottomSheetwithGetX(        controller
-                                                        .bookingRequests[index],
-                                                    index);
+                                                    .showBottomSheetwithGetX(
+                                                        controller
+                                                                .bookingRequests[
+                                                            index],
+                                                        index);
                                                 // sendSms(
                                                 //     controller
                                                 //         .bookingRequests[index]
@@ -356,9 +309,7 @@ class _BookingRequestViewState extends State<BookingRequestView> {
                   : const Center(
                       child: CustomText(text: 'No requests are available'),
                     )),
-          SizedBox(
-            height: height * 0.05,
-          )
+          (height * 0.05).sbheight,
         ],
       ),
     );

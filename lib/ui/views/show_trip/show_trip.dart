@@ -16,12 +16,11 @@ class ShowTrips extends StatefulWidget {
 }
 
 class _ShowTripsState extends State<ShowTrips> {
-
   @override
   Widget build(BuildContext context) {
-      ShowTripController controller = Get.put(ShowTripController());
+    ShowTripController controller = Get.put(ShowTripController());
 
-     controller.isOninitCalled? null:controller.onInit();
+    controller.isOninitCalled ? null : controller.onInit();
     return SafeArea(
       child: Scaffold(
           resizeToAvoidBottomInset: true,
@@ -48,9 +47,7 @@ class _ShowTripsState extends State<ShowTrips> {
                         )
                       ]),
                 ),
-                SizedBox(
-                  height: width * 0.04,
-                ),
+                (width * 0.04).sbheight,
                 Center(
                   child: Obx(
                     () => controller.isLoading.value
@@ -133,15 +130,12 @@ class _ShowTripsState extends State<ShowTrips> {
                                             ],
                                           ),
                                           Row(children: [
-                                            SizedBox(
-                                              width: width * 0.03,
-                                            ),
+                                            (width * 0.03).sbwidth,
                                             Column(
                                               children: [
                                                 CustomText(
                                                     text:
                                                         "${controller.tripsList[index].from}"),
-                                                //CustomText("${controller.tripsList[index].to}"),
                                               ],
                                             ),
                                             const Spacer(),
@@ -150,13 +144,9 @@ class _ShowTripsState extends State<ShowTrips> {
                                                 CustomText(
                                                     text:
                                                         "${controller.tripsList[index].to}"),
-                                                //CustomText(""),
-                                                // constCustomText('Dubi'),
                                               ],
                                             ),
-                                            SizedBox(
-                                              width: width * 0.03,
-                                            )
+                                            (width * 0.03).sbwidth,
                                           ]),
                                           controller.tripsList[index].round !=
                                                   "true"
@@ -187,8 +177,6 @@ class _ShowTripsState extends State<ShowTrips> {
                                                         fontsize: width * 0.1,
                                                         fontWeight:
                                                             FontWeight.w100),
-                                                    // SvgPicture.asset(
-                                                    //     'assets/images/plane.svg'),
                                                     Image.asset(
                                                         "assets/images/airplane_Round.png",
                                                         width: width * 0.06),
@@ -229,18 +217,10 @@ class _ShowTripsState extends State<ShowTrips> {
                                                   children: [
                                                     const Icon(
                                                         Icons.arrow_upward),
-                                                    // SvgPicture.asset(
-                                                    //   'assets/images/date.svg',
-                                                    //   width: width * 0.06,
-                                                    // ),
-                                                    SizedBox(
-                                                      width: width * 0.02,
-                                                    ),
+                                                    (width * 0.02).sbwidth,
                                                     CustomText(
                                                         text:
                                                             "${controller.tripsList[index].goToDate}"),
-
-                                                    // constCustomText(""),
                                                   ],
                                                 ),
                                               ),
@@ -262,11 +242,7 @@ class _ShowTripsState extends State<ShowTrips> {
                                                     children: [
                                                       const Icon(
                                                           Icons.arrow_downward),
-                                                      // SvgPicture.asset(
-                                                      //     'assets/images/time.svg'),
-                                                      SizedBox(
-                                                        width: width * 0.02,
-                                                      ),
+                                                      (width * 0.02).sbwidth,
                                                       CustomText(
                                                           text:
                                                               "${controller.tripsList[index].backDate}"),

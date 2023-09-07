@@ -1,3 +1,5 @@
+import 'package:booking_flights/ui/shared/colors.dart';
+import 'package:booking_flights/ui/shared/utilis.dart';
 import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
@@ -22,11 +24,12 @@ class CustomText extends StatelessWidget {
       text,
       textAlign: TextAlign.center,
       style: TextStyle(
-          decoration: isDecoration ? TextDecoration.underline : null,
-          backgroundColor: backgroundColor,
-          color: textcolor,
-          fontSize: fontsize,
-          fontWeight: fontWeight),
+        decoration: isDecoration ? TextDecoration.underline : null,
+        backgroundColor: backgroundColor,
+        color: textcolor ?? AppColors.mainBlue1,
+        fontSize: fontsize ?? width * 0.04,
+        fontWeight: fontWeight ?? FontWeight.w500,
+      ),
     );
   }
 }
